@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root {
+    --envelope-color: #a165b9;
+    --bg-color:#f4f4f4;
+    --bg-envelope-color: #e5e6df;
+    --envelope-tab: #a768bf;
+    --envelope-cover: #ba79d2;
+    --shadow-color: rgba(0,0,0,0.5);
+    --txt-color: #757575;
+    --selo-color: #35000a;
+    --primary: #f2f2ef;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("pepa.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    place-items: center;   
+    animation: moveController 1s infinite alternate ease-in-out;
+}
+
+.envelope-back{
+    position: relative;
+    width: 320px;
+    height: 200px;
+    
+
+}
+
+.envelope-back:before{
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 320px;
+    height: 10px;
+    border-radius: 40%;
+    top: 250px;
+    opacity: 20%;
+}
+
+
+
+.container > .envelope-wrapper {
+    background: var(--bg-envelope-color);
+    /* box-shadow: 0 0 40px var(--shadow-color); */
+}
+
+/* definindo o tamanho do envelope */
+.container > .envelope-wrapper .envelope {
+    position: relative;
+    width: 300px;
+    height: 230px;
+}
+.envelope-wrapper > .envelope::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    border-top: 130px solid var(--envelope-color);
+    border-right: 150px solid transparent;
+    border-left: 150px solid transparent;
+    top: 0;
+    transform-origin: top;
+    transition: all 0.5s ease-in-out;
+}
+
+.envelope-wrapper > .envelope::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    border-top: 130px solid transparent;
+    border-left: 150px solid var(--envelope-tab);
+    border-right: 150px solid var(--envelope-tab);
+    border-bottom: 100px solid var(--envelope-color);
+    bottom: 0;
+}
+
+.envelope > .letter {
+    position: absolute;
+    right: 20%;
+    bottom: 0;
+    width: 54%;
+    height: 80%;
+    background: var(--primary);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 5px var(--shadow-color);
+    padding: 20px 10px;
+}
+
+.envelope > .letter > .text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.6rem;
+    text-align: center;
+    color: var(--txt-color);
+}
+
+.selo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* width: 20px;
+    height:20px; */
+    background-image: url("selo.png");
+    background-size: cover;
+    width: 70px;
+    height: 60px;
+    z-index: 4;
+    transform: translate(-50%, -20%) rotate(45deg);
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+
+}
+
+
+
+.flap > .envelope:before {
+    transform: rotateX(180deg);
+    z-index: 0;
+}
+
+.flap > .envelope > .letter {
+    bottom: 100px;
+    transform: scale(1.5);
+    transition-delay: 0.2s;
+}
+
+
+
+
+.flap > .selo {
+    transform: rotate(90deg);
+    transition-delay: 0.4s;
+}
+
+@keyframes moveController {
+    from {
+    transform: translate(-5%, -5%) rotate(-5deg);
+    }
+}
