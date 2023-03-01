@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("pepa.png");
+    background-image: url("bg.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
