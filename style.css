@@ -23,6 +23,10 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  /* .text{
+    margin-bottom: 150px;
+  } */
   
   .container {
     height: 100vh;
@@ -110,6 +114,11 @@
   .flap > .selo {
     transform: rotate(90deg);
     transition-delay: 0.4s;
+  }
+
+  p{
+    font-size: 0.6rem;
+
   }
 
   @keyframes moveController{
