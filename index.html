@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CONVITE</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="body">
+        
+      <div class="container">
         <div class="envelope-wrapper">
-            <div class="envelope">
-                <div class="letter">
-                    <div class="text">
-                        <strong>Você foi convidado!</strong>
-                        <p>Para comparecer a minha colação de grau
-                            no dia 03/03 às 19:00 no ginásio da Fatec!
-                        </p>
-                        <p>Ps: quem não for, levará uma punição severa!!!
-                        Ps2: Após a colação, iremos na Churrascaria Tabajara
-                        </p>
-               
-                    </div>
-                </div>
+          <div class="envelope">
+            <div class="letter">
+              <div class="text">
+                <strong>Você foi convidado!</strong>
+                <p>
+                  Para comparecer a minha colação de grau no dia 03/03 às 19:00
+                  no ginásio da Fatec!
+                </p>
+                <p>
+                  Ps: quem não for, levará uma punição severa!!! Ps2: Após a
+                  colação, iremos na Churrascaria Tabajara
+                </p>
+              </div>
             </div>
-            <div class="selo"></div>
+          </div>
+          <div class="selo"></div>
         </div>
+      </div>
     </div>
     <script>
-        const envelope = document.querySelector('.envelope-wrapper');
-        envelope.addEventListener('click', () => {
-            envelope.classList.toggle('flap');
-        });
+      const envelope = document.querySelector(".envelope-wrapper");
+      envelope.addEventListener("click", () => {
+        envelope.classList.toggle("flap");
+      });
     </script>
-</body>
+  </body>
 </html>
